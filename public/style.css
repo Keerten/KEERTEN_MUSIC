@@ -1,0 +1,127 @@
+/* Styling for container  */
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+/* CSS for Song List */
+.song-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 400px;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.song-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.song-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.song-details {
+  flex: 1;
+}
+
+.song-title {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.song-artist {
+  margin: 0;
+  color: #666;
+}
+
+.add-to-playlist {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.add-to-playlist:hover {
+  background-color: #0056b3;
+}
+
+/* CSS for Song Playlist  */
+.song-playlist {
+  width: 400px;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.remove-from-playlist {
+  background-color: #eb1919;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.remove-from-playlist:hover {
+  background-color: #b13434;
+}
+
+/* CSS for Add song form */
+.add-song-form {
+  list-style-type: none;
+  width: 400px;
+  border: 2px solid black;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.add-song-form h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-control {
+  width: 95%;
+}
+
+.add-songs-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.add-songs-btn:hover {
+  background-color: #0056b3;
+}

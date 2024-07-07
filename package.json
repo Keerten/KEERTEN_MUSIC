@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mongod": "^2.0.0",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.4.5",
+    "nodemon": "^3.0.3"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "keerten_music",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "description": ""
+}

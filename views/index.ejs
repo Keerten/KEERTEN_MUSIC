@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="song-list">
+        <h1>All Songs</h1>
+        <% for (let currItem of allItems) { %>
+        <div class="list-item">
+          <div class="song-image">
+            <img src="<%= currItem.image%>" />
+          </div>
+          <div class="song-details">
+            <p class="song-title">Title: <%= currItem.title %></p>
+            <p class="song-artist">Artist: <%= currItem.artist %></p>
+            <form action="/add" method="post">
+              <input type="hidden" name="idToAdd" value="<%= currItem._id %>" />
+              <button class="add-to-playlist">Add to Playlist</button>
+            </form>
+          </div>
+        </div>
+        <% } %>
+      </div>
+      <div class="song-playlist">
+        <h1>My Playlist</h1>
+        <% if (playlistItems.length === 0){ %>
+        <p>You have no songs on the playlist!</p>
+        <% } %> <% for (let Items of playlistItems) { %>
+        <div class="list-item">
+          <div class="song-image">
+            <img src="<%= Items.image%>" />
+          </div>
+          <div class="song-details">
+            <p class="song-title">Title: <%= Items.title %></p>
+            <p class="song-artist">Artist: <%= Items.artist %></p>
+            <form action="/remove" method="post">
+              <input type="hidden" name="idToDelete" value="<%= Items._id %>" />
+              <button class="remove-from-playlist">Remove from Playlist</button>
+            </form>
+          </div>
+        </div>
+        <% } %>
+      </div>
+      <div class="add-song-form">
+        <h1>Add Song to Website</h1>
+        <form action="/add-song" method="post">
+          <div class="form-group">
+            <label for="songName">Song Name</label>
+            <input
+              type="text"
+              name="songName"
+              id="song-name"
+              class="form-control"
+              placeholder="Enter new title of song to add"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="songArtist">Song Artist</label>
+            <input
+              type="text"
+              name="songArtist"
+              id="song-artist"
+              class="form-control"
+              placeholder="Enter Artist of above song"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="songImage">Image:</label>
+            <input
+              type="url"
+              name="songImage"
+              id="song-image"
+              class="form-control"
+              placeholder="Enter URL of cover image"
+              required
+            />
+          </div>
+          <button class="add-songs-btn">Add Song</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
